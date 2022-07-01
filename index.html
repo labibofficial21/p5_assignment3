@@ -1,0 +1,105 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="Free Web tutorials">
+        <meta name="keywords" content="HTML, CSS, JavaScript">
+        <meta name="author" content="John Doe">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Assignment 2</title>
+
+        <link rel="stylesheet" href="styles.css">
+    </head>
+
+    <body>
+        <div class="navbar">
+            <ul>
+                <!-- link ke index2.html berupa PROFILE -->
+                <li>HOME</a></li>
+                <li>PRODUCT</li>
+                <li>GALLERY</li>
+                <li><a href="blog.html">BLOG</a></li>
+                <li>MY INVENTORY</li>
+            </ul>
+        </div>
+
+        <div class="kontak">
+            <fieldset>
+                <div class="grid-container">
+                    <div class="grid-item">
+                        <img src="fotoku.png" style="width: 150px; float: left;">
+                    </div>
+                    <div class="grid-item">
+                        <h3 id="gantinama">Nama Anda</h3>
+                        <p id="gantirole">Front End Developer</p>
+                        <button class="kontak">Kontak</button>
+                        <button class="resume">Resume</button>
+                    </div>
+                    <div class="grid-item-2">
+                        <ul>
+                            <strong>
+                                <li>Availability</li>
+                                <li>Usia</li>
+                                <li>Lokasi</li>
+                                <li>Pengalaman</li>
+                                <li>Email</li>
+                            </strong>
+                        </ul>
+                    </div>
+                    <div class="grid-item-2">
+                        <ul>
+                            <li id="gantiavailability">Full Time</li>
+                            <li id="gantiage">23 tahun</li>
+                            <li id="gantilokasi">Jakarta, Indonesia</li>
+                            <li id="gantipengalaman">10</li>
+                            <li id="gantiemail">labibghaly21@gmail.com</li>
+                        </ul>
+                    </div>
+                  </div>
+            </fieldset>
+        </div>
+
+        <form class="form" id="form1" onsubmit="return false">
+            <label for="nama">Nama</label><br>
+            <input type="text" id="inputnama" name="nama" value=""><br>
+            <label for="role">Role</label><br>
+            <input type="text" id="inputrole" name="role" value=""><br>
+            <label for="availability">Availability</label><br>
+            <input type="text" id="inputavailability" name="availability" value=""><br>
+            <label for="age">Age</label><br>
+            <input type="text" id="inputage" name="age" value=""><br>
+            <label for="lokasi">Lokasi</label><br>
+            <input type="text" id="inputlokasi" name="lokasi" value=""><br>
+            <label for="pengalaman">Years Experience</label><br>
+            <input type="text" id="inputpengalaman" name="pengalaman" value=""><br>
+            <label for="email">Email</label><br>
+            <input type="text" id="inputemail" name="email" value=""><br><br>
+            <input type="submit" value="Submit" onclick="tampilkan()" style="background-color:green; color:white">
+            <!-- <button onclick="SimpanForm()" style="background-color:green; color:white">Submit</button> -->
+        </form>
+
+        <p id="form2"></p>
+    </body>
+</html>
+
+<script>
+    function tampilkan(){
+        var getnama1=document.getElementById("form1").inputnama.value;
+        var getnama2=document.getElementById("form1").inputrole.value;
+        var getnama3=document.getElementById("form1").inputavailability.value;
+        var getnama4=document.getElementById("form1").inputage.value;
+        var getnama5=document.getElementById("form1").inputlokasi.value;
+        var getnama6=document.getElementById("form1").inputpengalaman.value;
+        var getnama7=document.getElementById("form1").inputemail.value;
+        
+    
+        document.getElementById("gantinama").innerHTML = getnama1;
+        document.getElementById("gantirole").innerHTML = getnama2;
+        document.getElementById("gantiavailability").innerHTML = getnama3;
+        document.getElementById("gantiage").innerHTML = getnama4;
+        document.getElementById("gantilokasi").innerHTML = getnama5;
+        document.getElementById("gantipengalaman").innerHTML = getnama6;
+        document.getElementById("gantiemail").innerHTML = getnama7;   
+    }
+
+</script>
